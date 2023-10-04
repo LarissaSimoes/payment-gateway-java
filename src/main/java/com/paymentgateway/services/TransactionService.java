@@ -50,7 +50,7 @@ public class TransactionService {
   }
 
   public boolean authorizeTransaction(User sender, BigDecimal value) {
-   ResponseEntity<Map> authorizationResponse = restTemplate.getForEntity("https://run.mocky.io/v3/8fafdd68-a090-496f-8c9a-3442cf30dae6", Map.class);
+   ResponseEntity<Map> authorizationResponse = restTemplate.getForEntity("https://run.mocky.io/v3/87369035-ed43-421a-a09b-3b7f1d294b9d", Map.class);
    if (authorizationResponse.getStatusCode() == HttpStatus.OK) {
      String message = (String) authorizationResponse.getBody().get("message");
      return "Autorizado".equalsIgnoreCase(message);
